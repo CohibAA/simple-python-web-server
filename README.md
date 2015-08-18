@@ -1,5 +1,7 @@
 # simple-python-web-server
 
+This project is not fully tested may contain bugs.  Use at your own risk.  The main purpose of this project is to provide an example of a simple python web server and the usage of GET and POST for the same.  This is not intended for a production environment.  Please feel free to submit issues and/or PRs if you do encounter a bug or deprecated function.  Other issues or PRs that you feel would be beneficial to the spirit of this repository are also welcome.
+
 [Simple python web server to demonstrate GET/POST handling](http://joelinoff.com/blog/?p=1658)
 
 > Use it as a starting point to understand the package when creating your own custom web server for handling specific types of requests but recognize that it is not suitable for a production environment. To use it in such an environment you would, at the very least, want to add improve the error handling and add threading support. You would probably also want to add SSL/TLS support.
