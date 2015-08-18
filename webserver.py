@@ -188,7 +188,7 @@ def make_request_handler_class(opts):
             idx = self.path.find('?')
             if idx >= 0:
                 rpath = self.path[:idx]
-                args = cgi.parse_qs(self.path[idx+1:])
+                args = urlparse.parse_qs(self.path[idx+1:])
             else:
                 rpath = self.path
 
@@ -352,7 +352,7 @@ def make_request_handler_class(opts):
                 postvars = cgi.parse_multipart(self.rfile, pdict)
             elif ctype == 'application/x-www-form-urlencoded':
                 length = int(self.headers['content-length'])
-                postvars = cgi.parse_qs(self.rfile.read(length), keep_blank_values=1)
+                postvars = urlparse.parse_qs(self.rfile.read(length), keep_blank_values=1)
             else:
                 postvars = {}
 
